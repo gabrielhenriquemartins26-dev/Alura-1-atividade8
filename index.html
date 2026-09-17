@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Cidade Perdida — uma aventura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="jogo">
+    <h1 class="titulo">A Cidade Perdida</h1>
+
+    <!-- Passo 1: início -->
+    <section id="passo-1" class="passo ativo">
+      <p>Um dia desses, dentro de um livro da biblioteca da escola, eu descobri uma carta antiga sobre uma cidade perdida, escondida por riquezas e belezas naturais. Nessa carta, a autora deixa algumas pistas para encontrar essa cidade e eu decidi segui-las!</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="2">Rio de Janeiro</button>
+        <button class="btn-proximo" data-proximo="3">Pernambuco</button>
+      </div>
+    </section>
+
+    <!-- Passo 2: Rio de Janeiro -->
+    <section id="passo-2" class="passo">
+      <p>Você começa sua jornada no Rio de Janeiro, subindo o Pico da Tijuca ao amanhecer para encontrar a primeira pista.</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="4">Procurar a pista no topo do pico</button>
+        <button class="btn-proximo" data-proximo="9">Desistir e voltar para casa</button>
+      </div>
+    </section>
+
+    <!-- Passo 3: Pernambuco -->
+    <section id="passo-3" class="passo">
+      <p>Você começa sua jornada em Pernambuco, caminhando pelas praias escondidas de Fernando de Noronha em busca da primeira pista.</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="5">Procurar a pista nas praias</button>
+        <button class="btn-proximo" data-proximo="9">Desistir e voltar para casa</button>
+      </div>
+    </section>
+
+    <!-- Passo 4: pista do Rio -->
+    <section id="passo-4" class="passo">
+      <p>No topo do pico, escondido entre as pedras, você encontra um pedaço de pergaminho. Nele está escrito: <em>"Onde a água cai e o véu se abre, a passagem se revela."</em> Você lembra de uma cachoeira próxima, escondida na mata.</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="6">Seguir a trilha até a cachoeira</button>
+        <button class="btn-proximo" data-proximo="10">Voltar e descansar por hoje</button>
+      </div>
+    </section>
+
+    <!-- Passo 5: pista de Pernambuco -->
+    <section id="passo-5" class="passo">
+      <p>Na areia, meio enterrado, você encontra um mapa desenhado à mão. Ele mostra uma caverna escondida atrás dos recifes, acessível apenas na maré baixa.</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="7">Entrar na caverna escura</button>
+        <button class="btn-proximo" data-proximo="10">Voltar para a praia e esperar</button>
+      </div>
+    </section>
+
+    <!-- Passo 6: cachoeira -->
+    <section id="passo-6" class="passo">
+      <p>Depois de horas caminhando pela mata, você chega à cachoeira. Atrás da queda d'água, uma abertura na rocha aponta para um túnel escuro.</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="8-rio">Entrar sozinho na passagem</button>
+        <button class="btn-proximo" data-proximo="8-rio-amigos">Voltar e chamar os amigos para ajudar</button>
+      </div>
+    </section>
+
+    <!-- Passo 7: caverna -->
+    <section id="passo-7" class="passo">
+      <p>A maré baixa revela a entrada da caverna. Dentro, as paredes estão cobertas de marcações antigas que parecem contar uma história.</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="8-pernambuco">Seguir as marcações mais fundo</button>
+        <button class="btn-proximo" data-proximo="10">Voltar para a superfície</button>
+      </div>
+    </section>
+
+    <!-- Final: Rio, sozinho -->
+    <section id="passo-8-rio" class="passo final">
+      <p>Sozinho, você atravessa o túnel escuro guiado apenas pela luz do celular. No final, um brilho dourado ilumina paredes cobertas de ouro e pedras preciosas: você encontrou a cidade perdida! Foi arriscado, mas valeu a pena.</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="1">Jogar novamente</button>
+      </div>
+    </section>
+
+    <!-- Final: Rio, com amigos -->
+    <section id="passo-8-rio-amigos" class="passo final">
+      <p>Com a ajuda dos seus amigos, vocês exploram o túnel juntos, iluminando cada canto com segurança. No final, encontram a cidade perdida coberta de ouro e pedras preciosas — e o melhor de tudo, puderam comemorar a descoberta juntos!</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="1">Jogar novamente</button>
+      </div>
+    </section>
+
+    <!-- Final: Pernambuco -->
+    <section id="passo-8-pernambuco" class="passo final">
+      <p>Seguindo as marcações, você chega a uma câmara secreta dentro da caverna, onde ruínas de uma antiga cidade submersa brilham sob a luz que entra pelas frestas das rochas. Você encontrou a cidade perdida!</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="1">Jogar novamente</button>
+      </div>
+    </section>
+
+    <!-- Final: desistiu -->
+    <section id="passo-9" class="passo final">
+      <p>Você decide que essa aventura é arriscada demais e volta para casa. A cidade perdida continua escondida... talvez outra pessoa a encontre um dia.</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="1">Jogar novamente</button>
+      </div>
+    </section>
+
+    <!-- Final: perdido -->
+    <section id="passo-10" class="passo final">
+      <p>Sem a coragem ou as pistas necessárias para continuar, você acaba se perdendo no caminho de volta. Depois de horas andando em círculos, decide desistir por hoje. Talvez seja melhor tentar de novo com mais preparo.</p>
+      <div class="escolhas">
+        <button class="btn-proximo" data-proximo="1">Jogar novamente</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
